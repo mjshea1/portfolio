@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<!-- National Merit -->
+
+<meta charset="UTF-8">
+<meta name="copyright" content="© James Shea Design" />
+<meta name="author" content="James Shea" />
+<meta name="Description" content="View the National Merit web design and website at the University of Alabama designed by Matthew James Shea." />
+<meta name="keywords" content="Eugene Oregon, Eugene, Oregon, Matthew Shea, James Shea, Graphic Designer, Web Designer, Web Developer, UI/UX Designer, Brand Manager" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><!-- This is for viewing the page on smartphones-->
+
+<title>James Shea Design</title>
+
+<link rel="stylesheet" href="../../stylesheets/style.css" />
+<!--[if lt IE 9]><script src="../../scripts/html5shiv.js"></script><![endif]-->
+
+<style>
+	#header-wrapper {background: url(header.jpg) 50% 0 no-repeat fixed; background-size: 100%;}
+	@media only screen and (max-width : 650px) {#header-wrapper {background: url(header-mobile.jpg) 50% 0 repeat; background-attachment: fixed; background-size: 100%;}
+</style>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+
+<section id="header-wrapper" data-type="background" data-speed="3" class="pages">
+	<div id="header-info">
+
+		<nav class="group">
+            <a class="logo" href="../.././">James Shea Design</a>       
+            <a href="#" id="pull"></a>
+            <ul class="group">
+                <li><a href=".././">Design</a></li>
+                <li><a href="../../about/">About</a></li>
+                <li><a href="https://www.behance.net/jamessheadesign" target="_blank">Behance</a></li>
+            </ul>
+    	</nav>
+    
+        <header>
+            <h2>National Merit</h2>
+        </header>
+    
+	</div>
+</section>
+
+
+
+<section id="content-wrapper">
+    <div id="content">
+
+        <p>The University of Alabama's Undergraduate Admissions' National Scholars page is a custom built responsive website designed to provide information about The National Merit Scholarship Programs & Packages available to incoming students. This micro-site was one of the first sites that taught me about the importance of responsive design. By using HTML5 and CSS3 I created a custom framework for this page. It is a mobile-first approach that looks clean on any screen resolution. Additionally, it performs well on any browser with a small amount of progressive enhancement.</p>
+		<p class="info">Web Design - UA Undergraduate Admissions - November 2013</p>
+        <div class="site-link"><a href="http://scholarships.ua.edu/nationalscholars/" class="second-link merit-red">Visit Site</a></div>
+    
+    <img src="one.jpg" alt="National Merit on a laptop" />
+    <img src="two.jpg" alt="National Merit website" />
+    <img src="three.jpg" alt="National Merit responsive design" />
+    <img src="four.jpg" alt="National Merit on the desktop" />
+
+
+    </div>
+    
+</section>
+
+
+<div class="last-link">
+	<ul class="prevnext-links hide">
+        <li><a href="../../portfolio/oit-inside/" class="second-link merit-red">Prev</a></li>
+        <li><a href="../../portfolio/wvua/" class="second-link merit-red">Next</a></li>
+    </ul>
+	<a href=".././" class="second-link merit-red">Back To Design</a>
+</div>
+
+
+<footer id="footer-wrapper">
+	<div id="footer">
+    
+    <div class="totop hide"><a href="#top" class="gotop"><img src="../../images/top-icon.svg" /></a></div>
+    
+	<div id="footer-links">
+    	<ul class="group">
+            <li><a href="../../about/">Contact</a></li>
+            <li><a href="../../links/">Links</a></li>
+            <li><a href="../../credits/">Credits</a></li>
+            <li><a href="https://www.behance.net/jamessheadesign" target="_blank">Behance</a></li>
+        </ul>
+		<p>All rights reserved. Please don't steal. Copyright &copy; 2008 - 2015  &nbsp; &#124; &nbsp; James Shea Design v4.5</p>
+	</div>
+            
+    </div>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="../../scripts/respond.min.js"></script>
+<script src="../../scripts/modernizr.js"></script>
+
+<script>
+		$(document).ready(function() {
+		// Animate the scroll to top
+		$('.gotop').click(function(event) {
+			event.preventDefault();
+			
+			$('html, body').animate({scrollTop: 0}, 300);
+		})
+		});
+	
+		// This is for the parallax scrolling
+		$(document).ready(function(){
+
+			var $window = $(window);
+			var w = $(window).width();
+
+				$('section[data-type="background"]').each(function(){
+				var $bgobj = $(this); // assigning the object
+				
+				$(window).scroll(function() {
+				var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+				
+				if(yPos > 0){ yPos = 0 }
+				
+				// Put together our final background position
+				if(w > 960 ) {
+					var coords = '50% '+ yPos + 'px';
+				}
+				
+				// Move the background
+				$bgobj.css({ backgroundPosition: coords });
+			});
+			});
+		});
+					
+		// Showing the responsive menu
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+    
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23915151-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+</body>
+</html>
